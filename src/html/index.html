@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Directory listing for {file_path}</title>
+	<link rel="stylesheet" href="/css/main.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+	<pre class="ascii">
+ ___  ___  _______   ___       ___     ___    ___ 
+|\  \|\  \|\  ___ \ |\  \     |\  \   |\  \  /  /|
+\ \  \\\  \ \   __/|\ \  \    \ \  \  \ \  \/  / /
+ \ \   __  \ \  \_|/_\ \  \    \ \  \  \ \    / / 
+  \ \  \ \  \ \  \_|\ \ \  \____\ \  \  /     \/  
+   \ \__\ \__\ \_______\ \_______\ \__\/  /\   \  
+    \|__|\|__|\|_______|\|_______|\|__/__/ /\ __\ 
+                                      |__|/ \|__|</pre>
+	<h2>Directory listing for <span class="path">{file_path}</span></h2>
+	<div id="main">
+
+		<div class="readme">
+			{readme}
+		</div>
+		<hr>
+		<table>
+			<tr>
+				<td>File Name</td>
+				<td>Size</td>
+			</tr>
+			{file_links}
+		</table>
+		<hr>
+		<small>Powered by Helix | Copyright © 0x4248 2024 GNU GPL. <br>Content of this server may have a different licence.</small>
+	</div>
+	<script src="/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+body {
+	font-family: monospace;
+	background-color: black;
+	color: white;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+
+#main {
+	opacity: 0;
+    animation: animation-in 0.8s forwards 0s cubic-bezier( 0.86, 0, 0.07, 1 );
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:visited {
+	color: lightgray;
+}
+
+table {
+	width: 100%;
+}
+
+td {
+	padding: 2px 0;
+	outline: 0;
+	border: 0;
+	  border-bottom-width: 0px;
+	  border-bottom-style: none;
+	  border-bottom-color: currentcolor;
+
+	font-size: 1.2em;
+}
+
+.folder {
+	color: #10a7ff;
+}
+
+.folder:visited {
+	color: #10a7ff;
+}
+
+.ascii{
+	text-align: center;
+	color: #10a7ff;
+}
+
+.readme {
+	width: 100%;
+	overflow: scroll;
+	line-break: anywhere;
+}
+
+.dotfile {
+	color: gray;
+}
+
+.dotfolder {
+	color: #117bb8;
+}
+
+
+.animation-out-body{
+	animation: animation-out 0.4s forwards 0s cubic-bezier( 0.86, 0, 0.07, 1 );
+}
+
+
+@keyframes  animation-in {
+    from {
+        opacity: 0;
+        scale: 0.9;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+    
+}
+
+
+@keyframes  animation-out {
+    from {
+        opacity: 1;
+        scale: 1;
+    }
+	to {
+        opacity: 0;
+        scale: 0.9;
+    }
+    
+}
+
+#main table {
+	opacity: 0;
+	animation: animation-in 0.8s forwards 0s cubic-bezier( 0.86, 0, 0.07, 1 );
+}
+
+
+#main a {
+	opacity: 0;
+	animation: animation-in 0.8s forwards 0.2s cubic-bezier( 0.86, 0, 0.07, 1 );
+}
+
+#main pre {
+	opacity: 0;
+	animation: animation-in 0.8s forwards 0s cubic-bezier( 0.86, 0, 0.07, 1 );
+}
+
+
+#main h2 {
+	opacity: 0;
+	animation: animation-in 0.8s forwards 0s cubic-bezier( 0.86, 0, 0.07, 1 );
+}
+
+.path {
+	opacity: 0;
+	animation: animation-in 0.4s forwards 0s cubic-bezier( 0.86, 0, 0.07, 1 );
+}
