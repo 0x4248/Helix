@@ -1,0 +1,39 @@
+# Python black lint workflow
+# Github: https://www.github.com/0x4248/workflows
+# By: 0x4248
+
+name: Format python with black
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+
+jobs:
+  python-black:
+    name: Python Black
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install black
+      - name: Git pull
+        run: |
+          git pull
+      - name: Format with Black
+        run: |
+          black .
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Format python code with black"
+          file_pattern: "*.py"
