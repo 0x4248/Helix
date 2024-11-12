@@ -144,7 +144,8 @@ async def read_root():
 	readme = get_readme_and_format(root)
 	return file_listing_html.format(file_links=file_links,
 								  	readme=readme,
-									file_path="/")
+									file_path="/",
+									version=version)
 
 @app.get("/{file_path:path}")
 async def read_file(file_path: str):
@@ -154,7 +155,8 @@ async def read_file(file_path: str):
 		readme = get_readme_and_format(file_path)
 		return HTMLResponse(content=file_listing_html.format(file_links=file_links,
 													    	readme=readme,
-															file_path=file_path.replace(root, "")))
+															file_path=file_path.replace(root, "")),
+															version=version)
 	elif os.path.isfile(file_path):
 		return FileResponse(file_path)
 	else:
