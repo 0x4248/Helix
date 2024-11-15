@@ -23,7 +23,7 @@ from markdown.extensions.meta import MetaExtension
 import datetime
 
 app = FastAPI()
-root = "."
+root = "/Users/blix/Documents"
 boot_time = datetime.datetime.now()
 version = "0.1.0"
 
@@ -31,9 +31,9 @@ file_listing_html = open("src/html/index.html").read()
 
 icons = {
     "extentions": [
-        [".iso", ".img", ".img.gz", ".rom"],
+        [".iso", ".cd", ".dvd"],
         [".tar", ".tar.gz", ".tar.xz", ".tar.bz2"],
-        [".img", ".img.gz", ".bin", ".rom"],
+        [".img", ".img.gz", ".rom"],
         [".pdf"],
         [".txt", ".md", ".rtf", ".doc", ".docx"],
         [
@@ -203,9 +203,7 @@ async def read_css(file_path: str):
 async def read_root():
     file_links = generate_file_links(root)
     readme = get_readme_and_format(root)
-    return file_listing_html.format(
-        file_links=file_links, readme=readme, file_path="/", version=version
-    )
+    return file_listing_html.format(file_links=file_links, readme=readme, file_path="/", version=version)
 
 
 @app.get("/{file_path:path}")
@@ -219,8 +217,8 @@ async def read_file(file_path: str):
                 file_links=file_links,
                 readme=readme,
                 file_path=file_path.replace(root, ""),
-            ),
-            version=version,
+                version=version
+            )
         )
     elif os.path.isfile(file_path):
         return FileResponse(file_path)

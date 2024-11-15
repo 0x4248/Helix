@@ -2,6 +2,8 @@
 
 A HTTP server that serves static files with a file listing that has support for README files in markdown, HTML, and plain text.
 
+![demo](img/demo.png)
+
 ## Installation
 
 You will need to have:
