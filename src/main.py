@@ -26,6 +26,7 @@ boot_time = datetime.datetime.now()
 version = "0.1.0"
 file_listing_html = open("src/html/index.html").read()
 
+
 @app.get("/css/{file_path:path}")
 async def read_css(file_path: str):
     file_path = "src/css/" + file_path

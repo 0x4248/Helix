@@ -68,7 +68,7 @@ icons = {
             ".midi",
         ],
         [".gz", ".zip", ".rar", ".7z"],
-		[".deb", ".rpm", ".pkg", ".msi", ".dmg", ".apk"]
+        [".deb", ".rpm", ".pkg", ".msi", ".dmg", ".apk"],
     ],
     "icon": [
         "bi bi-disc-fill",  # iso
@@ -85,6 +85,6 @@ icons = {
         "bi bi-file-play-fill",  # mov
         "bi bi-file-music",  # mp3
         "bi bi-file-zip",  # zip
-		"bi bi-box-fill" # packages
+        "bi bi-box-fill",  # packages
     ],
 }
