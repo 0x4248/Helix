@@ -74,6 +74,10 @@ td {
 }
 
 
+a:hover {
+	text-decoration: underline;
+}
+
 @keyframes  animation-in {
     from {
         opacity: 0;
@@ -115,6 +119,10 @@ td {
 	animation: animation-in 0.8s forwards 0s cubic-bezier( 0.86, 0, 0.07, 1 );
 }
 
+#main img {
+	opacity: 0;
+	animation: animation-in 0.8s forwards 0s cubic-bezier( 0.86, 0, 0.07, 1 );
+}
 
 #main h2 {
 	opacity: 0;
