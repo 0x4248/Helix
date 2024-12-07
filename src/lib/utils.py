@@ -23,7 +23,6 @@ from markdown.extensions.meta import MetaExtension
 from lib.globals import root
 from lib.icons import icons
 
-
 def generate_file_links(path):
     files = os.listdir(path)
     files.sort(key=lambda x: os.path.isdir(os.path.join(path, x)), reverse=True)
